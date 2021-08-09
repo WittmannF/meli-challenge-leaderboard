@@ -33,6 +33,8 @@ jobs:
       run: git config --global user.email "fernando.wittmann@gmail.com"
     - name: Add name as credential 
       run: git config --global user.name "Fernando Wittmann"
+    - name: add remote url https://github.com/WittmannF/meli-challenge-leaderboard.git
+      run: git remote set-url origin
     - name: check for changes
       run: git status
     - name: stage changed files
