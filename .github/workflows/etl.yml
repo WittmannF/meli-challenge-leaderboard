@@ -29,6 +29,10 @@ jobs:
       run: |
         python etl.py
         
+    - name: Add email credential
+      run: git config --global user.email "fernando.wittmann@gmail.com"
+    - name: Add name as credential 
+      run: git config --global user.name "Fernando Wittmann"
     - name: check for changes
       run: git status
     - name: stage changed files
