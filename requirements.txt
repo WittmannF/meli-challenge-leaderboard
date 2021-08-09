@@ -1,0 +1,7 @@
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+streamlit
+pandas
