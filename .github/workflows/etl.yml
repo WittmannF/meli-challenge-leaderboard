@@ -24,7 +24,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        if [ -f requirements_etl.txt ]; then pip install -r requirements_etl.txt; fi
     - name: Test with pytest
       run: |
         python etl.py
