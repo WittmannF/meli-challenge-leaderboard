@@ -16,6 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
@@ -29,19 +32,13 @@ jobs:
       run: |
         python etl.py
         
-    - name: Add email credential
-      run: git config --global user.email "fernando.wittmann@gmail.com"
-    - name: Add name as credential 
-      run: git config --global user.name "Fernando Wittmann"
-    - name: add remote url https://github.com/WittmannF/meli-challenge-leaderboard.git
-      run: git remote set-url origin
-    - name: check for changes
-      run: git status
-    - name: stage changed files
-      run: git add .
-    - name: commit changed files
-      run: git commit -m "Auto updating CSV file"
-    - name: fetch from master
-      run: git fetch origin master
-    - name: push code to master
-      run: git push origin HEAD:master
+    - name: Commit files
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
