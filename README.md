@@ -4,3 +4,6 @@ This project is going to track and display the top scores from https://ml-challe
 - https://github.com/WittmannF/meli-challenge-leaderboard/blob/main/leaderboard/leaderboard.csv
 
 Contributions and suggestions are welcome! You just have to open an issue. Thanks!
+
+## Limitations
+The original Meli leaderboard is going to be checked depending every 5 to 10 minutes (minimum cron inteval job available on github actions), hence, submitions that are performed in between those times will not be captured. 
