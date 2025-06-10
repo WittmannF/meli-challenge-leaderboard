@@ -1,2 +1,2 @@
 Username,borda count,sum of scores,id,churn,propensity category,propensity sku,hidden1,hidden2,hidden3,borda countold,sum of scoresold,idold,churnold,propensity categoryold,propensity skuold,hidden1old,hidden2old,hidden3old,Top Score,top borda count
-baseline,0,4.2019,-1,0.6947,0.6985,0.6919,0.6579,0.7382,0.7207,169,4.0437,-1,0.6911,0.6927,0.6484,0.6445,0.6602,0.7068,4.2019,169
+baseline,0,4.2019,-1,0.6947,0.6985,0.6919,0.6579,0.7382,0.7207,0,4.2019,-1,0.6947,0.6985,0.6919,0.6579,0.7382,0.7207,4.2019,0
